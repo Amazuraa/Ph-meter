@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+	<head>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+		
+		<script src="extend.js"></script>
+		<title>Ph Meter</title>
+	</head>
+	
+	<body>
+		<div class="row" style="padding-top: 2rem;">
+			<div class="col-12 d-flex justify-content-center">
+				<div class="card m-3 p-3" style="width: 60rem;">
+					<div class="card-body">
+						<table>
+							<tr>
+								<th id="liquid">H<sub>2</sub>SO<sub>4</sub> <br>0.1 M</th>
+								<th id="liquid"> &nbsp HCl &nbsp <br>0.1 M</th>
+								<td id="image" rowspan="3">
+									
+									<div class="parent">
+										<div class="parent_beaker" ondrop="drop(event)" ondragover="allowDrop(event)">
+											<img id="beaker_main" class="beaker_main" src="beaker_base.png">
+											<img id="ph_main" class="ph_meter_main" src="blank.png">
+											<p id="ph_meter_value" class="mt-3">40</p>
+											<img id="thermo" class="thermo" src="blank.png">
+											<p id="note">*x</p>
+											<img id="beaker_layer" src="beaker_layer.png">
+										</div>
+										
+										<div id="parent_ph_meter" class="parent_ph_meter">
+											<img id="ph_meter_icon" src="pH_meter.png" draggable="false" ondragstart="return false;"/>
+										</div>
+										
+										<div id="parent_ph_ui" class="parent_ph_ui">
+											<img id="ph_ui_icon" src="pH_ui.png" draggable="false" ondragstart="return false;">
+										</div>
+									<div>
+									
+								</td>
+								<th id="liquid">NaOH <br>0.1 M</th>
+								<th id="liquid">Ca(OH)<sub>2</sub> <br>0.1 M</th>
+							</tr>
+							<tr>
+								<th><input type="range" id="slider1" min="0" max="50" step="10" value="0" orient="vertical"></th>
+								<th><input type="range" id="slider2" min="0" max="50" step="10" value="0" orient="vertical"></th>
+								<th><input type="range" id="slider3" min="0" max="50" step="10" value="0" orient="vertical"></th>
+								<th><input type="range" id="slider4" min="0" max="50" step="10" value="0" orient="vertical"></th>
+							</tr>
+							<tr>
+								<th id="result"><span id="result1">0</span> mL</th>
+								<th id="result"><span id="result2">0</span> mL</th>
+								<th id="result"><span id="result3">0</span> mL</th>
+								<th id="result"><span id="result4">0</span> mL</th>
+							</tr>
+							<tr>
+								<th colspan=5>
+									<hr>
+								</th>
+							</tr>
+							<tr>
+								<th colspan="5">
+									<input type="button" id="process" value="Jalankan" onclick=click_process()>
+									<input type="button" id="reset" value="Reset Alat Ukur" onclick=reset_process()>
+								</th>
+							</tr>
+							
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<table style="visibility:hidden">
+			<tr>
+				<!--change-able data-->
+				<td colspan="2">Warna Kertas Indikator Universal</td>
+				<th id="ph_color"><span id="color"></span></th>
+			</tr>
+			<tr>
+				<!--change-able data-->
+				<td colspan="2">Angka pH meter</td>
+				<th><span id="ph_number">0</span></th>
+			</tr>
+			<tr>
+				<!--change-able data-->
+				<td colspan="2">Suhu termometer (0C)</td>
+				<th><span id="degree_number">0.C</span></th>
+			</tr>
+			<tr>
+				<!--change-able data-->
+				<td colspan="2">Liquid meter</td>
+				<th><span id="adding">0.C</span></th>
+			</tr>
+		</table>
+		
+		<script src="variables.js"></script>
+	</body>
+</html>

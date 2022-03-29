@@ -1,0 +1,149 @@
+body {
+    font-family: 'PT Sans', sans-serif;
+}
+
+p {
+    font-family: 'PT Sans', sans-serif;
+}
+
+table {
+    width: 100%;
+}
+
+table, tr , th{
+    vertical-align: middle;
+    text-align: center;
+}
+
+input[type=range][orient=vertical]
+{
+    writing-mode: bt-lr; /* IE */
+    -webkit-appearance: slider-vertical; /* WebKit */
+    width: 8px;
+    height: 300px;
+    padding: 0 5px;
+}
+
+#image{
+    width : 500px;
+}
+
+#result{
+    width : 65px;
+}
+
+.parent{
+    font-family: 'PT Sans', sans-serif;
+    position: relative;
+    top : 0px;
+    left: 0px;
+}
+
+.parent_beaker{
+    font-family: 'PT Sans', sans-serif;
+    width : 400px;
+    height : 400px;
+    
+    position: relative;
+    top : 0px;
+    left: 0px;
+}
+
+.parent_ph_meter{
+
+    width : 100px;
+    height : 200px;
+    
+    border : 1px solid green;
+    position: absolute;
+    top : 0px;
+    left: 400px;
+}
+
+.parent_ph_ui{
+    width : 100px;
+    height: 200px;
+    
+    border : 1px solid gray;
+    position: absolute;
+    top : 200px;
+    left: 400px;
+}
+
+.beaker_main{
+    border: 1px;
+    width : 100%;
+    height: 100%;
+    
+    position: relative;
+    top : 0px;
+    left: 0px;
+}
+
+.ph_meter_main{
+    
+    width : 100%;
+    height: 100%;
+    
+    position: absolute;
+    top : 0px;
+    left: 0px;
+}
+
+#ph_meter_icon{
+    width : 50%;
+    height: 95%;
+    
+    position: absolute;
+    top : 5px;
+    left : 25px;
+}
+
+#ph_ui_icon{
+    height : 95%;
+    
+    position: absolute;
+    top : 5px;
+    left : 30px;
+}
+
+.thermo{
+    
+    position: absolute;
+    top : 130px;
+    left: 5px;
+    
+    width: 30%;
+    height: 65%;
+}
+
+#ph_meter_value{
+    position: absolute;
+    font-family: "Trebuchet MS";
+    font-size: 14px;
+    
+    top: 126px;
+    left: 227px;
+    display: none;
+}
+
+#note{
+    position: absolute;
+    font-family: "Trebuchet MS";
+    font-size: 13px;
+    
+    top: 280px;
+    left: 280px;
+    display: none;
+}
+
+#beaker_layer{
+    border: 1px;
+    width : 53%;
+    height: 54%;
+    
+    position: absolute;
+    top : 179px;
+    left: 84px;
+
+}
